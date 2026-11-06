@@ -1,0 +1,32 @@
+[package]
+name = "vetis-log"
+version = "0.1.0-beta.3"
+authors = ["Rogerio Araújo <rogerio.araujo@gmail.com>"]
+edition = "2024"
+repository = "https://github.com/vetis-server/vetis-log"
+homepage = "https://github.com/vetis-server/vetis-log"
+description = "Very Tiny Server logging support"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["http", "modules", "logging", "tracing"]
+publish = true
+rust-version = "1.85.0"
+
+[dependencies]
+jiff = "0.2.37"
+log = { version = "0.4.34", features = ["serde_core"] }
+logforth = { version = "0.30.1", features = [
+    "append-syslog",
+    "append-file",
+    "bridge-log",
+    "layout-text",
+] }
+logforth-core = "0.4.0"
+serde = { version = "1.0.229", features = ["derive"] }
+typetag = "0.2.21"
+vetis = { version = "0.1.7-beta.5" }
+
+[patch.crates-io]
+vetis = { path = "../vetis/vetis" }
+vetis-flash = { path = "../vetis-flash" }
+vetis-tokio = { path = "../vetis-tokio" }
