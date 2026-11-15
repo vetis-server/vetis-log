@@ -10,10 +10,10 @@ readme = "README.md"
 license = "MIT OR Apache-2.0"
 keywords = ["http", "modules", "logging", "tracing"]
 publish = true
-rust-version = "1.85.0"
+rust-version = "1.86.0"
 
 [dependencies]
-jiff = "0.2.37"
+jiff = "0.2.43"
 log = { version = "0.4.34", features = ["serde_core"] }
 logforth = { version = "0.30.1", features = [
     "append-syslog",
@@ -24,9 +24,9 @@ logforth = { version = "0.30.1", features = [
 logforth-core = "0.4.0"
 serde = { version = "1.0.229", features = ["derive"] }
 typetag = "0.2.21"
-vetis = { version = "0.1.7-beta.5" }
-
-[patch.crates-io]
 vetis = { path = "../vetis/vetis" }
-vetis-flash = { path = "../vetis-flash" }
-vetis-tokio = { path = "../vetis-tokio" }
+
+# [patch.crates-io]
+# vetis = { path = "../vetis/vetis" }
+# vetis-flash = { path = "../vetis-flash" }
+# vetis-tokio = { path = "../vetis-tokio" }
