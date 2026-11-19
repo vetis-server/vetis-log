@@ -34,9 +34,9 @@ on vetis.
 use vetis_log::StdoutLogConfig;
 use log::Level;
 
-let config = StdoutLogConfig::builder()
-    .log_leve(Level::Info)
-    .build()?;
+StdoutLogConfig::builder()
+  .log_leve(Level::Info)
+  .build()?;
 ```
 
 #### vetis.yaml
